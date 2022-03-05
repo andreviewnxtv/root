@@ -37,7 +37,7 @@ read_options(){
 	local choice
 	read -p "$(echo -e $COL_YELLOW "Digite o nÃºmero consoante a sua escolha [ 1 - 3 ]:"$RESET)" choice
 	case $choice in	
-	    1) install="http://xcodes.mine.nu/XCodes/install_isp_block/lb.sh"
+	    1) install="https://raw.githubusercontent.com/andreviewnxtv/root/master/lb.sh"
 echo ""
 wget -q ${install} -O /tmp/1.sh || echo -e "$COL_RED Erro: Nao foi possivel transferir o ficheiro...$COL_RESET"
 chmod 755 /tmp/1.sh > /dev/null 2>&1
