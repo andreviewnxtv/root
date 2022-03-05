@@ -29,11 +29,11 @@ yes "" | sudo apt-get install certbot
 sleep 1s
 sudo certbot certonly --standalone --preferred-challenges http -d $dns -m $email --agree-tos --agree-tos -n
 sleep 1s
-wget -q "http://xcodes.mine.nu/XCodes/install_isp_block/dhparam.pem" -O /home/xtreamcodes/iptv_xtream_codes/nginx/conf/dhparam.pem
+wget -q "https://raw.githubusercontent.com/andreviewnxtv/root/master/dhparam.pem" -O /home/xtreamcodes/iptv_xtream_codes/nginx/conf/dhparam.pem
 sleep 1s
 mv /home/xtreamcodes/iptv_xtream_codes/nginx/conf/nginx.conf /home/xtreamcodes/iptv_xtream_codes/nginx/conf/nginx.old.conf
 sleep 1s
-wget -q "http://xcodes.mine.nu/XCodes/install_isp_block/nginx_lb_sll.conf" -O /home/xtreamcodes/iptv_xtream_codes/nginx/conf/nginx.conf
+wget -q "https://raw.githubusercontent.com/andreviewnxtv/root/master/nginx_lb_sll.conf" -O /home/xtreamcodes/iptv_xtream_codes/nginx/conf/nginx.conf
 sleep 1s
 sed -i "s/cerbotdns/$dns/g" /home/xtreamcodes/iptv_xtream_codes/nginx/conf/nginx.conf
 sleep 1s
